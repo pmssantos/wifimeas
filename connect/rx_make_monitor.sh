@@ -1,3 +1,10 @@
+###################
+# Sets an WLAN interface in monitor mode (if supported), at RX
+#
+# Initial version code by Luís Pinto (https://scholar.google.pt/citations?user=stvtLQgAAAAJ&hl=pt-PT)
+# Further refinements (if applicable) by Pedro Santos
+###################
+
 WLAN_NUM=$1
 #WLAN_NUM="$(iw dev | grep Interface | grep wlx | awk 'NR==1{ print $2;}')"
 MON_NAME=$2

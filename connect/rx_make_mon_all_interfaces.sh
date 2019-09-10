@@ -1,3 +1,10 @@
+###################
+# Turns all WLAN interface in adhoc mode 
+# Uses make_monitor.sh
+#
+# Initial version code by Luís Pinto (https://scholar.google.pt/citations?user=stvtLQgAAAAJ&hl=pt-PT)
+# Further refinements (if applicable) by Pedro Santos
+###################
 RED='\033[1;31m'
 NC='\033[0m' # No Color
 sudo service network-manager stop

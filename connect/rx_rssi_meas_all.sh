@@ -1,3 +1,10 @@
+###################
+# Once an WLAN interface is set in monitor mode, we initiate TCP dump to collect traces
+#
+# Initial version code by Luís Pinto (https://scholar.google.pt/citations?user=stvtLQgAAAAJ&hl=pt-PT)
+# Further refinements (if applicable) by Pedro Santos
+###################
+
 RED='\033[1;31m'
 NC='\033[0m' # No Color
 if [[ $# -ne 2 ]]; then

@@ -1,3 +1,11 @@
+###################
+# Sets an WLAN interface in adhoc mode (if supported), at TX
+# Uses adhoc_connect.sh
+#
+# Initial version code by Luís Pinto (https://scholar.google.pt/citations?user=stvtLQgAAAAJ&hl=pt-PT)
+# Further refinements (if applicable) by Pedro Santos
+###################
+
 #WDEV=wlx000f60050e55
 RED='\033[1;31m'
 NC='\033[0m'
