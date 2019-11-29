@@ -15,8 +15,6 @@ def iperf_faraway():
 
 if __name__ == "__main__":
 
-	setup_routes
-
 	x = threading.Thread(target=iperf_faraway)
 	x.start()
 
