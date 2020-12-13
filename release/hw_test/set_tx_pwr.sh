@@ -1,16 +1,24 @@
 ###################
-# Sets an WLAN interface in adhoc mode (if supported), at TX
-# Uses adhoc_connect.sh
+# Tests if TX power of WLAN interface can be changed 
 #
 # Initial version code by Luís Pinto (https://scholar.google.pt/citations?user=stvtLQgAAAAJ&hl=pt-PT)
 # Further refinements (if applicable) by Pedro Santos
+# https://wireless.wiki.kernel.org/en/users/documentation/iw#getting_device_capabilities
 ###################
 RED='\033[1;31m'
 NC='\033[0m'
 
-#FREQ=$2
+iwconfig
+iw phy phy0 set txpower fixed 13dBm
+
+printf ${RED}
+iwconfig $WDEV
+printf "Changed $WDEV setup -- DONE!${NC}\n"
+
+
+
 #nn=$1
-#WDEV="$(iw dev | grep Interface | grep wlx | awk 'NR=='${nn}'{ print $2;}')"
+#WDEV="$(iw dev | grep Interface | grep wl | awk 'NR=='${nn}'{ print $2;}')"
 #echo $WDEV
 #SSID=biknet$1
 
@@ -19,6 +27,7 @@ NC='\033[0m'
 #sudo iw dev $WDEV set type ibss
 #sudo ifconfig $WDEV 192.168.$1.2 up
 #sudo iw dev $WDEV ibss join $SSID $FREQ beacon-interval 100 basic-rates 1,12,24,48 mcast-rate 1
+<<<<<<< HEAD
 
 # https://wireless.wiki.kernel.org/en/users/documentation/iw#getting_device_capabilities
 #sudo iw dev $WDEV ibss join $SSID $FREQ beacon-interval 100 basic-rates 1,12,24,48 mcast-rate 1
@@ -36,3 +45,5 @@ then
 else
 	printf "Updated TxPower: $NPWR -- DONE!${NC}\n"	
 fi
+=======
+>>>>>>> e15df9e66ba06d24c9a06b0e7709948948b21664
