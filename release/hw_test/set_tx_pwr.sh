@@ -22,8 +22,17 @@ NC='\033[0m'
 
 # https://wireless.wiki.kernel.org/en/users/documentation/iw#getting_device_capabilities
 #sudo iw dev $WDEV ibss join $SSID $FREQ beacon-interval 100 basic-rates 1,12,24,48 mcast-rate 1
-iw phy phy0 set txpower fixed 13000mBm
 
+#iwconfig $WDEV
+PWR="$(iw dev | grep txpower | awk 'NR=='1'{ print $2;}')"
+printf "Current power: $PWR${NC}\n"
+echo "Trying to set to 13 dBm"
+iw phy phy0 set txpower fixed 13000mBm
 printf ${RED}
-iwconfig $WDEV
-printf "ADHOC $WDEV setup -- DONE!${NC}\n"
+NPWR="$(iw dev | grep txpower | awk 'NR=='1'{ print $2;}')"
+if [[ "$PWR" == "$NPWR" ]]
+then
+	printf "Failed to update TxPower\n"	
+else
+	printf "Updated TxPower: $NPWR -- DONE!${NC}\n"	
+fi
