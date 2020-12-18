@@ -14,7 +14,10 @@ CHAN=$3
 PHY_NUM=`iw dev |grep $WLAN_NUM -B 1 | awk -F '#' '{print $2}'`
 
 sudo iw dev $WLAN_NUM del
+echo "iw dev $WLAN_NUM del"
 sudo iw phy phy$PHY_NUM interface add $MON_NAME type monitor
+echo "iw phy phy$PHY_NUM interface add $MON_NAME type monitor"
 sudo ifconfig $MON_NAME up
+echo "ifconfig $MON_NAME up"
 sudo iw dev $MON_NAME set channel $CHAN
-
+echo "iw dev $MON_NAME set channel $CHAN"
