@@ -1,4 +1,4 @@
-<>https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines
+<https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines>
 
 # wifimeas
 
@@ -16,7 +16,7 @@ User Iperf to measure throughput between two terminals
 ## 2 - RSSI, one RX
 
 Measures RSSI of received packets.
-It is slow because it measures ad hoc becaones
+It is slow because it uses the ad hoc beacons from Tx (~100ms)
 
 ### Procedure (WiFi)
 1. Set Tx as ad hoc
@@ -31,7 +31,9 @@ Uses two Rx antennas for faster data collection: the Tx sets up fast data transm
 
 ### Procedure (WiFi)
 
-
+1. Set Tx as ad hoc
+2. Set Rx as monitor and run tcpdump
+3. Start Iperf on Rx and Tx
 
 ### Procedure (11p)
 * TBD
