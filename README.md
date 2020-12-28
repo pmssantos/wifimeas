@@ -2,13 +2,8 @@
 
 Set of tools for measuring network performance.
 
-####################################################
-- iperf_edge_cloud
 
-Run two simultaneous instances of Iperf, one to a local server, other to a remote (cloud) server
 
-#- routes
-#Routes must be defined 
 
 ####################################################
 ## TCP DUMP
@@ -26,3 +21,9 @@ Run two simultaneous instances of Iperf, one to a local server, other to a remot
 
 ####################################################
 - example: 
+
+
+
+- iperf_edge_cloud
+
+Run two simultaneous instances of Iperf, one to a local server, other to a remote (cloud) server
