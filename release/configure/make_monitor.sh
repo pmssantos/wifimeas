@@ -4,6 +4,11 @@
 # Initial version code by Luís Pinto (https://scholar.google.pt/citations?user=stvtLQgAAAAJ&hl=pt-PT)
 # Further refinements (if applicable) by Pedro Santos
 ###################
+if [ $# -le 3 ]; then
+	printf "${RED} Usage: make_monitor <#wireless dev in 'iw dev'> <mon number> <channel (eg: 2412)> ${NC}\n"
+	exit 0
+fi
+echo "All set"
 
 WLAN_NUM=$1
 #WLAN_NUM="$(iw dev | grep Interface | grep wlx | awk 'NR==1{ print $2;}')"

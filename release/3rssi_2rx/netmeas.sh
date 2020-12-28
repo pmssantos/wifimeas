@@ -23,7 +23,7 @@ WLAN_NUM=$3
 MON_NAME=$4
 CHAN=$5
 
-../configure/make_monitor $2 $3 $4
+../configure/make_monitor.sh $2 $3 $4
 
 if [[ $1 == "c" ]]; then
 	logfile="../../logs/"$(date +"%Y%m%d_%H%M%S")"_rssi.log"
@@ -31,8 +31,6 @@ if [[ $1 == "c" ]]; then
 	echo "Files will be stored in $logfile"
 	
 	sudo tcpdump -i mon1 -w mon1_$logfile.pcap &
-else
-	
 fi
 
 

@@ -2,13 +2,32 @@
 
 Set of tools for measuring network performance.
 
+## 1 - Throughput
+
+User Iperf to measure throughput between two terminals
+
+## 2 - RSSI, one RX
+
+Measures RSSI of received packets.
+
+Procedure (WiFi)
+1. Set Tx as ad hoc
+2. Set Rx as monitor 
+
+
+Procedure (11p)
+
+## 3 - RSSI, two RX
+
+Measures RSSI of received packets
+Presumes two Rx antennas for faster data collection.
+The Tx sets up fast data transmission via Iperf or udpcast to one of the antennas of 
+
+Procedure (WiFi)
 
 
 
-####################################################
-## TCP DUMP
-
-- rssi_meas.sh
+Procedure (11p)
 
 #- tcpdumptoserver
 
