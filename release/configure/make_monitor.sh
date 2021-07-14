@@ -4,7 +4,7 @@
 # Initial version code by Luís Pinto (https://scholar.google.pt/citations?user=stvtLQgAAAAJ&hl=pt-PT)
 # Further refinements (if applicable) by Pedro Santos
 ###################
-if [ $# -le 3 ]; then
+if [ $# -le 2 ]; then
 	printf "${RED} Usage: make_monitor <#wireless dev in 'iw dev'> <mon number> <channel (eg: 2412)> ${NC}\n"
 	exit 0
 fi
